@@ -10,7 +10,11 @@ Shops built on Shopify offer a catalog API for software agents, based on the
 [Universal Commerce Protocol](https://ucp.dev) (UCP). Each call names a profile URL, so the shop can see who is
 asking and what the caller may do. The shop fetches the profile from a public address, and this is that address:
 
-    https://strangebasis.github.io/ucp-agent-profile/ucp-agent-profile.json
+    https://cdn.jsdelivr.net/gh/strangebasis/ucp-agent-profile@v1/ucp-agent-profile.json
+
+That is the [jsDelivr](https://www.jsdelivr.com) CDN serving this repository's `v1` tag. A CDN is used because the
+UCP specification requires profiles to be served with a `Cache-Control: public` header, which GitHub Pages cannot
+send.
 
 ## What the agent does
 
